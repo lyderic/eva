@@ -28,7 +28,7 @@ func main() {
 	flag.Parse()
 	agent.Address = net.JoinHostPort("localhost", agent.Port)
 	if debug {
-		tools.PrintRed("*** DEBUG MODE ***")
+		tools.PrintRedln("*** DEBUG MODE ***")
 	}
 	if !agent.isRunning() {
 		agent.start()
@@ -50,7 +50,7 @@ func main() {
 	case "version":
 		version()
 	default:
-		tools.PrintRed("command not found!")
+		tools.PrintRedln("command not found!")
 		usage()
 	}
 }
